@@ -40,15 +40,29 @@ end
 
 
 
-
+  # given that holiday_hash looks like this:
+  # {
+  #   :winter => {
+  #     :christmas => ["Lights", "Wreath"],
+  #     :new_years => ["Party Hats"]
+  #   },
+  #   :summer => {
+  #     :fourth_of_july => ["Fireworks", "BBQ"]
+  #   },
+  #   :fall => {
+  #     :thanksgiving => ["Turkey"]
+  #   },
+  #   :spring => {
+  #     :memorial_day => ["BBQ"]
+  #   }
+  # }
+  # return the second element in the 4th of July array
 
 
 
 
 
 def all_holidays_with_bbq(holiday_hash)
-  # return an array of holiday names (as symbols) where supply lists
-  # include the string "BBQ"
   bbq_holidays = []
   holiday_hash.each do |season, data_hash|
     data_hash.each do |holiday, supply_value|
