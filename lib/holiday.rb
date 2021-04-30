@@ -27,8 +27,6 @@ def all_winter_holiday_supplies(holiday_hash)
 end
 
 
-
-
 def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, holiday|
     puts "#{season.capitalize}:"
@@ -63,19 +61,11 @@ end
 
 
 def all_holidays_with_bbq(holiday_hash)
-  bbq_holidays = []
-  holiday_hash.each do |season, data_hash|
-    data_hash.each do |holiday, supply_value|
-      supply_value.each do |supplies|
-        binding.pry
-        if supplies.include?("BBQ")
-          bbq_holidays.push(holiday)
-          
-      
-        end
-      end
-    end
-  end
+  holiday_hash.collect do |season, holidays|
+    holidays.collect do ||
+
+
+
 end
 
 
